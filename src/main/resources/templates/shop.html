@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+</head>
+<body>
+<div layout:fragment="content"  class="container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-sm-3">
+            <h4>Categories</h4>
+            <ul class="list-group" >
+                <a th:href="@{/shop}"><li class="list-group-item">All Products</li></a>
+                <div th:each="mainCat : ${ListCat}">
+                    <div th:each="mc: ${mainCat}">
+                        <a th:href="'/shop/maincategory/'+ ${mc.key.id}"><li class="list-group-item" th:text="${mc.key.name}" ></a>
+                        </li>
+                        <ul th:each="subCat : ${mc.value}">
+                            <a th:href="'/shop/subcategory/'+ ${subCat.id}"><li  th:text="${subCat.name}" ></li></a>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div class="card" style="margin-top: 20px" th:each="product : ${products}">
+                <div class="row no-gutters">
+                    <div class="col-sm-5 d-flex justify-content-center">
+                        <img class="" height="150px" width="150px" th:src="@{${'/images/' + product.imageName}}" th:alt="${product.productName}">
+                    </div>
+                    <div class="col-sm-7 d-flex justify-content-center">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${product.productName}"></h5>
+                            <h4>₹ <span th:text="${product.price}"></span></h4>
+                            <p th:text="${product.description}" >Suresh Dasari is a founder and technical lead developer in tutlane.</p>
+                            <a href="#" th:href="@{/shop/viewproduct/{id}(id=${product.productId})}" class="btn btn-primary">View Product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p th:if="${products.size() == 0}">No products</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

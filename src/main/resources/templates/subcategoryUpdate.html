@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<div layout:fragment="content" class="container">
+    <div class="card">
+        <div class="card-body">
+            <form th:action="'/admin/subcategory/saveupdate'" th:object="${subCategory}" method="post">
+                <h2 class="text-center text-primary">EDIT SUB CATEGORY</h2>
+                <fieldset class="form-group">
+                    <label>SubCategory name:</label>
+                    <input class="form-control" type="text" th:field="*{name}">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Main Category</label>
+                    <select th:field="*{mainCategory}" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option th:each="cat : ${mainCategoryList}" th:value="${cat.id}" th:text="${cat.name}"/>
+                    </select>
+                </fieldset>
+                <input type="hidden" th:field="*{id}">
+                <div class="col text-center mt-3">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+            <div class="col">
+                <a th:href="'/admin/subcategory/list'">
+                    <button class="btn btn-success">Back To List</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
