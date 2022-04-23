@@ -29,6 +29,11 @@ public class UserController {
     @Autowired
     ProductRepository productRepository;
 
+    @GetMapping(value = {"/", "/home"})
+    public String home(Model model) {
+        return "index";
+    }
+
     @GetMapping(value = "/shop")
     public String getCategoryAndProduct(Model model){
         List<Product> products = productRepository.findAll();
