@@ -37,7 +37,7 @@ public class AdminController {
 
 
     // MAIN CATEGORY
-    @GetMapping(value = "/")
+    @GetMapping(value = "")
     public String adminHome(Model model) {
         return "adminHome";
     }

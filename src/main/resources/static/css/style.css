@@ -307,7 +307,7 @@ ul {
   text-transform: uppercase;
   font-weight: bolder;
 }
-.login-container input[type="email"], .login-container input[type="password"]{
+.login-container input[type="email"], .login-container input[type="password"],.login-container input[type="text"]{
   border: 0;
   background: none;
   display: block;
@@ -322,7 +322,7 @@ ul {
   transition: 0.25s;
 
 }
-.login-container input[type="email"]:focus, .login-container input[type="password"]:focus{
+.login-container input[type="email"]:focus, .login-container input[type="password"]:focus, .login-container input[type="text"]:focus{
   width:70%;
   border-color: #4d984e;
 }
@@ -343,7 +343,7 @@ ul {
   text-align: center;
 }
 
-.login-container input[type="email"]::placeholder, .login-container input[type="password"]::placeholder{
+.login-container input[type="email"]::placeholder, .login-container input[type="password"]::placeholder,.login-container input[type="text"]::placeholder{
   color: #adadad;
   opacity: 1;
 }
