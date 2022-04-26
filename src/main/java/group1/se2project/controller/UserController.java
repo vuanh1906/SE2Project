@@ -1,11 +1,13 @@
 package group1.se2project.controller;
 
+import group1.se2project.GlobalData.GlobalData;
 import group1.se2project.model.MainCategory;
 import group1.se2project.model.Product;
 import group1.se2project.model.SubCategory;
 import group1.se2project.repository.MainCategoryRepository;
 import group1.se2project.repository.ProductRepository;
 import group1.se2project.repository.SubCategoryRepository;
+import org.apache.tomcat.jni.Global;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +33,7 @@ public class UserController {
 
     @GetMapping(value = {"/", "/home"})
     public String home(Model model) {
+        model.addAttribute("cartCount", GlobalData.cart.size());
         return "index";
     }
 
@@ -47,6 +50,7 @@ public class UserController {
         }
         model.addAttribute("products", products);
         model.addAttribute("ListCat", ListCat);
+        model.addAttribute("cartCount", GlobalData.cart.size());
         return "shop";
     }
     @GetMapping(value = "/shop/maincategory/{id}")
@@ -84,5 +88,12 @@ public class UserController {
         List<Product> products = productRepository.findBySubCategoryEquals(subCategoryRepository.getById(id));
         model.addAttribute("products", products);
         return "shop";
+    }
+
+    @GetMapping(value = "/shop/viewproduct/{id}")
+    public String viewProduct(Model model, @PathVariable Long id) {
+        model.addAttribute("categories", mainCategoryRepository.findAll());
+        model.addAttribute("product", productRepository.getById(id));
+        return "productDetail";
     }
 }

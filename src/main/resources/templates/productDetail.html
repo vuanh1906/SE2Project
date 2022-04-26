@@ -21,6 +21,7 @@
             <h3 th:text="'Price: ' + ${product.price}" />
             <h3 th:text="'Description: ' + ${product.description}" />
         </div>
+        <a href="" th:href="@{/addToCart/{id}(id = ${product.productId})}" class="btn btn-primary">Add to cart</a>
     </div>
     <div class="row">
         <a th:href="'/admin/product/list'">
