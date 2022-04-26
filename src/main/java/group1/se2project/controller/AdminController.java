@@ -37,6 +37,10 @@ public class AdminController {
 
 
     // MAIN CATEGORY
+    @GetMapping(value = "/")
+    public String adminHome(Model model) {
+        return "adminHome";
+    }
     @GetMapping(value = "/maincategory/list")
     public String getMainCategory(Model model, @RequestParam(value = "page")Optional<Integer> p){
         Pageable pageable =  PageRequest.of(p.orElse(0), 10);

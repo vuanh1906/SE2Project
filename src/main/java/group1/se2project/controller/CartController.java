@@ -16,9 +16,6 @@ public class CartController {
     @Autowired
     ProductRepository productRepository;
 
-    @Autowired
-    UserRepository userRepository;
-
     @GetMapping(value = "/addToCart/{id}")
     public String addToCart(@PathVariable(value = "id") Long id ) {
         GlobalData.cart.add(productRepository.getById(id));
