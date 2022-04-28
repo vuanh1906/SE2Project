@@ -54,25 +54,21 @@
 <!--    </div>-->
 <!--</nav>-->
 <div class="logo1">
-    <a th:href="@{/}"><img th:src="@{images/logo.png}" /></a>
+    <a th:href="@{/}"><img th:src="@{/images/logo.png}" /></a>
 </div>
-<nav class="nav-one flex">
-    <ul class="middle flex">
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Language</a></li>
-    </ul>
+<nav class="nav-one" style="justify-content: flex-end; padding-bottom: 35px; display: flex;">
     <ul sec:authorize="!isAuthenticated()" class="right flex">
         <li><a th:href="@{/login}">Sign In</a></li>
         <li><a th:href="@{/register}">Sign Up</a></li>
     </ul>
-    <ul sec:authorize="isAuthenticated()" class="right flex welcome-user">
+    <ul sec:authorize="isAuthenticated()" class="right flex welcome-user" style="margin-bottom: 0px">
         <li>
-            <p sec:authorize="isAuthenticated()" style="padding-top: 5px">Welcome <span sec:authentication="name"
-                                                                                        style="text-decoration: underline"
-                                                                                        ;>Username</span></p>
+            <p sec:authorize="isAuthenticated()" style="margin-bottom: 0px; justify-content: flex-end" >Welcome <span sec:authentication="name"
+                                                                                                                      style="text-decoration: underline; "
+            >username</span></p>
         </li>
         <li>
-            <a th:href="@{/admin}" sec:authorize="isAuthenticated()" style="padding-top: 5px">Management</a>
+            <a th:href="@{/admin}" sec:authorize="hasRole('ROLE_ADMIN')" >Management</a>
         </li>
         <li><a th:href="@{/logout}">Log Out</a></li>
     </ul>
@@ -80,13 +76,12 @@
 <nav class="nav-second flex">
     <div
             class="brand-name"
-            onclick="location.href='#';"
-            style="cursor: pointer"
-    >
+            onclick="location.href='/';"
+            style="cursor: pointer">
         <h1 style="text-align: center">H-TECH</h1>
         <p>HANU Computer Ecommerce System</p>
     </div>
-    <ul class="flex">
+    <ul class="flex" style="justify-content: flex-end; padding: 0 40px; margin-right: 0px">
         <li><a th:href="@{/}">Home</a></li>
         <li><a th:href="@{/shop}">Shop</a></li>
         <li><a th:href="@{/cart}">Cart</a></li>

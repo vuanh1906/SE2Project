@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.text.DecimalFormat;
+
 @Controller
 public class CartController {
     @Autowired
@@ -21,28 +23,38 @@ public class CartController {
         GlobalData.cart.add(productRepository.getById(id));
         model.addAttribute("cart", GlobalData.cart);
         model.addAttribute("cartCount", GlobalData.cart.size());
-        model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
-        return "successalert";
+        double amount;
+        amount =GlobalData.cart.stream().mapToDouble(Product::getPrice).sum();
+        DecimalFormat formatter = new DecimalFormat("###,###,###");
+        model.addAttribute("total", formatter.format(amount));
+        return "cart";
     }
 
     @GetMapping(value = "/cart")
     public String cart(Model model) {
+        double amount;
+        amount =GlobalData.cart.stream().mapToDouble(Product::getPrice).sum();
+        DecimalFormat formatter = new DecimalFormat("###,###,###");
+        model.addAttribute("total", formatter.format(amount));
         model.addAttribute("cartCount", GlobalData.cart.size());
-        model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
         model.addAttribute("cart", GlobalData.cart);
         return "cart";
     }
 
-    @RequestMapping(value = "deleteCart/{id}")
-    public String deleteFromCart(@PathVariable (value = "id") Long id ){
-        GlobalData.cart.remove(productRepository.getById(id));
+    @RequestMapping(value = "/cart/removeItem/{index}")
+    public String deleteFromCart(@PathVariable int index ){
+        GlobalData.cart.remove(index);
 
-        return "shop";
+        return "redirect:/cart";
     }
 
     @RequestMapping(value = "/checkout")
     public String checkout (Model model) {
-        model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
+        double amount;
+        amount =GlobalData.cart.stream().mapToDouble(Product::getPrice).sum();
+        DecimalFormat formatter = new DecimalFormat("###,###,###");
+
+        model.addAttribute("total", formatter.format(amount));
         return  "checkout";
     }
 }

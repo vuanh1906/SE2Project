@@ -1,7 +1,11 @@
 package group1.se2project.model;
 
 
+import group1.se2project.GlobalData.GlobalData;
+
 import javax.persistence.*;
+import java.text.DecimalFormat;
+import java.util.Locale;
 
 @Entity
 public class Product {
@@ -10,7 +14,7 @@ public class Product {
     @Column(name = "product_id", nullable = false)
     private Long productId;
     private String productName;
-    private int price;
+    private double price;
     private String imageName;
     private String description;
     @ManyToOne
@@ -25,14 +29,25 @@ public class Product {
         this.productName = productName;
     }
 
-    public int getPrice() {
+    public double getPrice() {
+
+
+
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
+
+
+
         this.price = price;
     }
+public String convert(double price){
+    price = this.price;
+    DecimalFormat formatter = new DecimalFormat("###,###,###");
 
+        return formatter.format(price);
+}
     public String getImageName() {
         return imageName;
     }

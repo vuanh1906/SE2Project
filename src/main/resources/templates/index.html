@@ -46,7 +46,7 @@
                                                                                          >username</span></p>
         </li>
         <li>
-            <a th:href="@{/admin}" sec:authorize="isAuthenticated()" >Management</a>
+            <a th:href="@{/admin}" sec:authorize="hasRole('ROLE_ADMIN')" >Management</a>
         </li>
         <li><a th:href="@{/logout}">Log Out</a></li>
     </ul>
@@ -54,12 +54,12 @@
 <nav class="nav-second flex">
     <div
             class="brand-name"
-            onclick="location.href='#';"
+            onclick="location.href='/';"
             style="cursor: pointer">
         <h1 style="text-align: center">H-TECH</h1>
         <p>HANU Computer Ecommerce System</p>
     </div>
-    <ul class="flex">
+    <ul class="flex" style="justify-content: flex-end; padding: 0 40px; margin-right: 0px" >
         <li><a th:href="@{/}">Home</a></li>
         <li><a th:href="@{/shop}">Shop</a></li>
         <li><a th:href="@{/cart}">Cart</a></li>
@@ -152,7 +152,7 @@
             </div>
 
             <div class="col-md-4">
-                <a class = "test" href="login.html">
+                <a class = "test" th:href="@{/shop}" style="text-decoration: none">
                     <div class="service-item third-service">
 
                         <div class="service-icon"></div>

@@ -36,6 +36,10 @@ public class UserController {
         model.addAttribute("cartCount", GlobalData.cart.size());
         return "index";
     }
+    @GetMapping(value="success")
+    public String successPage(){
+        return "success";
+    }
 
     @GetMapping(value = "/shop")
     public String getCategoryAndProduct(Model model){

@@ -22,7 +22,7 @@ h1{
     height: fit-content;
 }
 .product_info {
-    height: 70px;
+
     margin: 10px 15px 10px 15px;
 }
 .title{
@@ -50,8 +50,28 @@ h1{
     margin-left: 15px;
     margin-right: 10px;
 }
+.btnDetail a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.btnCart a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.btnCart a:visited, .btnDetail a:visited{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.btnCart a:hover, .btnDetail a:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
 .btnCart, .btnDetail{
-    border: none;
     background-color: #d8d5cf;
 }
 .btnCart:hover{
@@ -67,7 +87,7 @@ h1{
     box-sizing: border-box;
     position: fixed;
     width: 250px;
-    background: #1b1b1b;
+    background: #646060;
     color: white;
 }
 .sideBar .text{
@@ -75,11 +95,10 @@ h1{
     text-align: center;
     line-height: 50px;
     font-weight: 500;
-    background: #1e1e1e;
     letter-spacing: 1.5px;
 }
 .sideBar ul{
-    background: #1b1b1b;
+
     height: 100%;
     width: 100%;
     list-style: none;
