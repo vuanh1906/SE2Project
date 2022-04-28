@@ -43,7 +43,7 @@ body {
   margin-left: 500px;
 }
 .right {
-  margin-left: 200px;
+
 }
 .form-title {
   text-align: center;
@@ -292,7 +292,6 @@ ul {
 .welcome-user {
   font-size: 25px;
   color: #ffffff;
-  padding-top: 5px;
 }
 .login-container{
   margin: auto;
