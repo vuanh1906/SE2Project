@@ -17,9 +17,12 @@ public class CartController {
     ProductRepository productRepository;
 
     @GetMapping(value = "/addToCart/{id}")
-    public String addToCart(@PathVariable(value = "id") Long id ) {
+    public String addToCart(@PathVariable(value = "id") Long id,Model model ) {
         GlobalData.cart.add(productRepository.getById(id));
-        return "redirect:/shop";
+        model.addAttribute("cart", GlobalData.cart);
+        model.addAttribute("cartCount", GlobalData.cart.size());
+        model.addAttribute("total", GlobalData.cart.stream().mapToDouble(Product::getPrice).sum());
+        return "successalert";
     }
 
     @GetMapping(value = "/cart")
