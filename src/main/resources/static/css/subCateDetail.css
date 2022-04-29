@@ -29,7 +29,7 @@ ul li {
     list-style-type: circle;
 
 }
-.detailsList{
+.detailInfoList{
     color: #cf0823;
     text-align: justify;
     line-height: 1.5em;
@@ -41,7 +41,7 @@ ul li {
     border-radius: 5px;
     width: 100%;
 }
-.content-table-childCate {
+.content-table-proInCate {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 17px;
@@ -51,39 +51,39 @@ ul li {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     width: inherit;
 }
-.content-table-childCate thead tr {
+.content-table-proInCate thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
 }
-.content-table-childCate th,
-.content-table-childCate td {
+.content-table-proInCate th,
+.content-table-proInCate td {
     padding: 12px 15px;
 }
-.content-table-childCate tbody tr td a button {
+.content-table-proInCate tbody tr td a button {
     width: 70px;
     margin-bottom: 5px;
 }
-.content-table-childCate tbody tr td a{
+.content-table-proInCate tbody tr td a{
     text-decoration: none;
 }
-.content-table-childCate tbody tr {
+.content-table-proInCate tbody tr {
     border-bottom: 3px dashed #dbcaca;
 }
 
-.content-table-childCate tbody tr:nth-of-type(even) {
+.content-table-proInCate tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
-.content-table-childCate tbody tr:nth-of-type(odd) {
+.content-table-proInCate tbody tr:nth-of-type(odd) {
     background-color: #f3f3f3;
 }
 
-.content-table-childCate tbody tr:last-of-type {
+.content-table-proInCate tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
-.content-table-childCate tbody tr.active-row {
+.content-table-proInCate tbody tr.active-row {
     font-weight: bold;
     color: #009879;
 }

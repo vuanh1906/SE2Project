@@ -39,7 +39,8 @@
             <img class="image" style="height: 300px" th:alt="${product.productName}"
                  th:src="@{${'/images/' + product.imageName}}" width="300px"/>
             <div class="product_info">
-                <h4 class="title" th:text="${product.productName}"></h4>
+                <p class="title" th:text="${product.productName}"></p>
+                <p class="desciption" th:text="${product.description}"></p>
             </div>
             <div class="price_container">
                 <span class="price">
@@ -55,7 +56,6 @@
             </div>
             <div class="action" style="display: flex;">
                 <span class="status" style="width: 50%">
-
                 <i class="fa fa-check"></i>
                     In stock
                 </span>

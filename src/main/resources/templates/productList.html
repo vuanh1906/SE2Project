@@ -16,7 +16,9 @@
 <div class="container" layout:fragment="content">
     <h2><a class="titleList" th:href="'/admin/product/list'">Product List</a></h2>
     <nav class="nav">
-        <a class="btn btn-info" style="margin: 20px 0;background-color:white;margin-left: 15px;color:#064f40" th:href="'/admin/product/add'"><i class="fa-solid fa-circle-plus" style="color:#009879"></i> Add Product</a>
+        <a class="btn btn-info" style="background-color:white;margin: 20px 0 20px 15px;color:#064f40" th:href="'/admin/product/add'"><i class="fa-solid fa-circle-plus" style="color:#009879"></i> Add Product</a>
+        <a class="btn btn-info" style="background-color:white;margin: 20px 0 20px 15px;color:#064f40" th:href="'/admin/product/sort/desc'"> Sort Descending <i class="fa-solid fa-sort-down" style="color:#009879"></i></a>
+        <a class="btn btn-info" style="background-color:white;margin: 20px 0 20px 15px;color:#064f40" th:href="'/admin/product/sort/asc'"> Sort Ascending <i class="fa-solid fa-sort-up" style="color:#009879"></i></a>
         <form action="/admin/product/search" class="form-inline">
             <input aria-label="Search" class="form-control mr-sm-2" name="keyword" placeholder="Search by Name" type="search" style="width: 360px">
             <button class="btn btn-info" id="btnSearch" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -88,71 +90,6 @@
             </li>
         </ul>
     </nav>
-    <footer class="footer">
-        <div class="container2">
-            <div class="row2">
-                <div class="special">
-                    <h1>Don't Miss Out</h1>
-                    <p>
-                        Enter email for our latest news and promos.<br />Chance to win
-                        free coupons.
-                    </p>
-                    <br />
-                    <input
-                            type="email"
-                            id="email_input"
-                            placeholder="Email address"
-                    /><br />
-                    <input type="submit" class="submit" />
-                    <h2>H-TECH</h2>
-                    <p>Km9, Nguyen Trai, Nam Tu Liem, Hanoi City</p>
-                    <br />
-                    <p>+84 912 783 623</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Terms of Use</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Social Media</h4>
-                    <div class="social-links">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                        <a href=""><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="">Shop</a></li>
-                        <li><a href="">Cart</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="">Contact Us</a></li>
-                        <li><a href="">Refund</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr
-                    style="
-            height: 4px;
-            border-width: 0;
-            color: gray;
-            background-color: gray;
-          "
-            />
-            <div class="copy-right">
-                <h3>Copyright @SE2 Project 2022</h3>
-            </div>
-        </div>
-    </footer>
 </div>
 </body>
 </html>

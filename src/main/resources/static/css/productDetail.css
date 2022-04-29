@@ -103,10 +103,24 @@ ul li {
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
-    background: whitesmoke;
+    background: #d8d5cf;
     border-color: aqua;
 }
 .btnCart:hover{
     transform:scale(1.1);
 }
-
+.btnCart a:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.btnCart a:visited{
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.btnDetail a:link{
+    color:black;
+    background-color: transparent;
+    text-decoration: none;
+}
