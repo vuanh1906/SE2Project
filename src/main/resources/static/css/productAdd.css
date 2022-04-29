@@ -3,7 +3,7 @@ body{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.formAdd{
+.formAddPro{
     max-width: 550px;
     width: 100%;
     background: #fff;
@@ -12,7 +12,7 @@ body{
     padding: 30px;
 }
 
-.formAdd .title{
+.formAddPro .title{
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -22,26 +22,28 @@ body{
     display: flex;
 }
 
-
-.formAdd .form{
+.formAddPro .form{
     width: 100%;
 }
 
-.formAdd .form .inputField{
+.formAddPro .form .inputField{
     margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
-.formAdd .form .inputField label{
+.formAddPro .form .inputField label{
     width: 200px;
     color: #757575;
     margin-right: 10px;
     font-size: 16px;
 }
-
-.formAdd .form .inputField .input{
+.formAddPro .form .inputField .textarea{
+    height: 80px;
+}
+.formAddPro .form .inputField .input, .formAddPro .form .inputField .textarea{
     width: 100%;
+    height: 45px;
     outline: none;
     border: 1px solid #d5dbd9;
     font-size: 15px;
@@ -49,11 +51,11 @@ body{
     border-radius: 3px;
     transition: all 0.3s ease;
 }
-.button{
+.buttonProAdd{
     display: flex;
     align-items: center;
 }
-.button button{
+.buttonProAdd button{
     width: 100%;
     padding: 8px 10px;
     font-size: 16px;
@@ -64,8 +66,9 @@ body{
     border-radius: 3px;
     outline: none;
     margin-bottom: 15px;
+    margin-top: 10px;
 }
-.button button:hover{
+.buttonProAdd button:hover{
     background: #0fbf9b;
     transform: scale(1.0);
 }
@@ -77,4 +80,32 @@ body{
 }
 #back:hover{
     transform: scale(1.1);
+}
+.formAddPro .form .inputField .selection{
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+.formAddPro .form .inputField .selection:before{
+    content: "";
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #acc2bb transparent transparent transparent;
+    pointer-events: none;
+}
+.formAddPro .form .inputField .selection select{
+    -webkit-appearance: none;
+    -moz-appearance:   none;
+    appearance:        none;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    border: 0px;
+    padding: 10px 11px 10px 12px;
+    margin-right: 2px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
 }

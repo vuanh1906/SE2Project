@@ -14,6 +14,9 @@
 <div layout:fragment="content" class="container">
     <div class="formAddSub">
         <div class="title">
+            <a th:href="'/admin/subcategory/list'">
+                <button class="btn btn-success" id="back" style="font-size: 15px; margin-right: 95px">Back</button>
+            </a>
             ADD SUB CATEGORY
         </div>
         <form class="form" th:action="'/admin/subcategory/saveadd'" th:object="${subCategory}" method="post">
@@ -34,9 +37,6 @@
                 <button type="submit">Submit and Save</button>
             </div>
         </form>
-        <a th:href="'/admin/maincategory/list'">
-            <button class="btn btn-success" id="back">Back To List</button>
-        </a>
     </div>
 </div>
 </body>

@@ -19,6 +19,7 @@ body{
     color: #009879;
     text-transform: uppercase;
     text-align: center;
+    display: flex;
 }
 
 .formAddSub .form{
@@ -49,7 +50,6 @@ body{
     transition: all 0.3s ease;
 }
 .buttonSub{
-    display: flex;
     align-items: center;
 }
 .buttonSub button{
@@ -64,6 +64,7 @@ body{
     outline: none;
     margin-bottom: 15px;
     margin-top: 10px;
+    text-decoration: none;
 }
 .buttonSub button:hover{
     background: #0fbf9b;
@@ -73,7 +74,7 @@ body{
     border: 0px;
     border-radius: 3px;
     outline: none;
-    background: #08755f;
+    background: #009879;
 }
 #back:hover{
     transform: scale(1.1);
