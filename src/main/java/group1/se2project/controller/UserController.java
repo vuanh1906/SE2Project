@@ -33,6 +33,8 @@ public class UserController {
 
     @GetMapping(value = {"/", "/home"})
     public String home(Model model) {
+        List<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
         model.addAttribute("cartCount", GlobalData.cart.size());
         return "index";
     }

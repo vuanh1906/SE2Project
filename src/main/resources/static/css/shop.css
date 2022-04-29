@@ -1,9 +1,7 @@
 body{
     background: #d8d5cf;
 }
-h1{
-    color: brown;
-}
+
 .allCard {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -20,6 +18,7 @@ h1{
 }
 .price_container{
     height: fit-content;
+    justify-content: flex-start;
 }
 .product_info {
 
