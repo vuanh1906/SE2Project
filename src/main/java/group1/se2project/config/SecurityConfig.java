@@ -51,6 +51,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .disable();
         http.headers().frameOptions().disable();
+
+
     }
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
