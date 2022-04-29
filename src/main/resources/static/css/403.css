@@ -19,9 +19,6 @@ body{
     margin: 0;
     font-weight: 900;
     letter-spacing: 20px;
-    background: url(static/images/imgBG.jpg) center no-repeat;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 .container h2{
     font-size: 35px;
