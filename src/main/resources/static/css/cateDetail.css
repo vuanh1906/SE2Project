@@ -1,0 +1,74 @@
+/**{*/
+/*    font-family: 'Open Sans', sans-serif*/
+/*}*/
+/*.tbContainer{*/
+/*    color: #cf0823;*/
+/*    text-align: justify;*/
+/*    line-height: 1.5em;*/
+/*    margin-top: 25px;*/
+/*    color: #008000;*/
+/*    font-family: tahoma, arial, helvetica, sans-serif;*/
+/*    line-height: 10px;*/
+/*    border: 1px dashed black;*/
+/*    border-radius: 5px;*/
+/*    width: 60%;*/
+/*}*/
+/*.tbContainer p {*/
+/*    display: block;*/
+/*    margin-block-start: 1em;*/
+/*    margin-block-end: 1em;*/
+/*    margin-inline-start: 0px;*/
+/*    margin-inline-end: 0px;*/
+/*}*/
+/*.tb{*/
+/*    color: #444;*/
+/*    padding-left: 35px;*/
+/*    margin: 10px 0 !important;*/
+/*}*/
+/*ul li {*/
+/*    list-style-type: circle;*/
+
+/*}*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.formAdd{
+    max-width: 550px;
+    width: 100%;
+    background: #fff;
+    margin: 50px auto;
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.125);
+    padding: 30px;
+}
+.formAdd .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #009879;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+}
+.tb{
+    color: #444;
+    padding-left: 35px;
+    margin: 10px 0 !important;
+}
+ul li {
+    list-style-type: circle;
+
+}
+.detailsList{
+    color: #cf0823;
+    text-align: justify;
+    line-height: 1.5em;
+    margin-top: 25px;
+    color: #008000;
+    font-family: tahoma, arial, helvetica, sans-serif;
+    line-height: 10px;
+    border: 1px dashed black;
+    border-radius: 5px;
+    width: 100%;
+}

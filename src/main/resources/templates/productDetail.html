@@ -20,7 +20,7 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img th:src="@{${'/images/' + product.imageName}}" class="d-block w-100" alt="Product Images">
+                            <img th:src="@{${'/images/' + product.imageName}}" class="d-block w-100" alt="Product Images" style="height: 605px; width: 800px">
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <!-- price -->
                 <div class="priceBox">
                     <div class="price">
-                        <p class="amount" th:text="${product.convert(product.price)}+ '₫'" />
+                        <p class="amount" th:text="'Price: '+${product.convert(product.price)}+ '₫'" />
                     </div>
                     <div class="textDiv">
                         <span class="insurance">Insurance 18 months</span>
@@ -84,11 +84,7 @@
                 </div>
                 <!-- quantity -->
                 <div class="inputNumber">
-<!--                    <button class="btnCart">-->
-<!--                        <i class="fas fa-cart-plus"></i>-->
-<!--                        <a th:href="@{/addToCart/{id}(id = ${product.productId})}">Add</a>-->
-<!--                    </button>-->
-                    <button class="btnCart" style="margin-right: 3px;border-radius: 10px;padding: 3px">
+                    <button class="btnCart" style="margin-left: 0px;border-radius: 10px; padding: 3px">
                         <a style="text-decoration: none" th:href="@{/addToCart/{id}(id = ${product.productId})}">Add <i
                                 class="fas fa-cart-plus" style="font-size: 20px"> </i></a>
                     </button>
