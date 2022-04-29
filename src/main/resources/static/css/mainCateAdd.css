@@ -4,7 +4,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .wrapper{
-    max-width: 700px;
+    max-width: 550px;
     width: 100%;
     background: #fff;
     margin: 50px auto;
@@ -16,7 +16,7 @@ body{
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
-    color: #fec107;
+    color: #009879;
     text-transform: uppercase;
     text-align: center;
 }
@@ -35,7 +35,7 @@ body{
     width: 200px;
     color: #757575;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .wrapper .form .inputField .input{
@@ -46,4 +46,33 @@ body{
     padding: 8px 10px;
     border-radius: 3px;
     transition: all 0.3s ease;
+}
+.button{
+    display: flex;
+    align-items: center;
+}
+.button button{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 0px;
+    background: #009879;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 15px;
+}
+.button button:hover{
+    background: #0fbf9b;
+    transform: scale(1.0);
+}
+#back{
+    border: 0px;
+    border-radius: 3px;
+    outline: none;
+    background: #08755f;
+}
+#back:hover{
+    transform: scale(1.1);
 }

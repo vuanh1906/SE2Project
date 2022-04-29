@@ -61,10 +61,10 @@
                 </span>
                 <div style="justify-content: space-between; width: 70%; display: flex; padding: 0px 20px">
                 <button class="btnCart" style="margin-right: 3px;border-radius: 10px;padding: 3px">
-                    <a th:href="@{/addToCart/{id}(id = ${product.productId})} " style="text-decoration: none">Add<i class="fas fa-cart-plus" style="font-size: 20px"> </i></a>
+                    <a th:href="@{/addToCart/{id}(id = ${product.productId})} " style="text-decoration: none">Add <i class="fas fa-cart-plus" style="font-size: 20px"> </i></a>
                 </button>
                 <button class="btnDetail" style="border-radius: 10px;padding: 3px">
-                    <a th:href="'/shop/viewproduct/' + ${product.productId}"style="text-decoration: none">Detail<i class="fa-solid fa-circle-info" style="font-size: 20px"></i></a>
+                    <a th:href="'/shop/viewproduct/' + ${product.productId}"style="text-decoration: none">Detail <i class="fa-solid fa-circle-info" style="font-size: 20px"></i></a>
                 </button></div>
             </div>
         </div>

@@ -22,7 +22,7 @@ h1{
     height: fit-content;
 }
 .product_info {
-
+    height: 70px;
     margin: 10px 15px 10px 15px;
 }
 .title{

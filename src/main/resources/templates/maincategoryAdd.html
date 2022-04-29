@@ -12,36 +12,23 @@
 </head>
 <body>
 <div layout:fragment="content" class="container">
-    <h2 class="text text-primary">ADD NEW CATEGORY</h2>
-    <div class="row">
-        <div class="col-sm-4">
-            <form th:action="'/admin/maincategory/save'" th:object="${maincategory}" method="post">
-                <input type="hidden" name="id"  th:field="*{id}">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" required th:field="*{name}" name="name" id="name"  placeholder="Enter name">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <a th:href="'/admin/maincategory/list'">
-            <button class="btn btn-success">Back To List</button>
-        </a>
-    </div>
     <div class="wrapper">
         <div class="title">
             ADD MAIN CATEGORY
         </div>
-        <div class="form" th:action="'/admin/maincategory/save'" th:object="${maincategory}" method="post">
+        <form class="form" th:action="'/admin/maincategory/save'" th:object="${maincategory}" method="post">
+            <input type="hidden" name="id"  th:field="*{id}">
             <div class="inputField">
-                <input type="hidden" name="id"  th:field="*{id}">
                 <label for="name">Category Name</label>
                 <input type="text" class="input" required th:field="*{name}" name="name" id="name">
             </div>
-        </div>
+            <div class="button">
+                <button type="submit">Submit and Save</button>
+            </div>
+        </form>
+        <a th:href="'/admin/maincategory/list'">
+            <button class="btn btn-success" id="back">Back To List</button>
+        </a>
     </div>
 </div>
 </body>
