@@ -23,7 +23,7 @@
                 <div class="title">
                     Billing Details
                 </div>
-                <form class="form">
+                <form class="form" method="get" th:action="@{/success}">
                     <div class="inputField">
                         <label>First Name</label>
                         <input class="input" required type="text">
@@ -61,10 +61,10 @@
                         <label>Additional information</label>
                         <textarea class="input" type="text"></textarea>
                     </div>
-                    <form action="" method="get" th:action="@{/success}">
-                        <button class="btn btn-primary btn-block waves-effect waves-light" type="submit" style="background: #009879;">Pay Now
+
+                        <button class="btn btn-primary btn-block waves-effect waves-light" type="submit" style="background: #009879;" >Pay Now
                         </button>
-                    </form>
+
                 </form>
             </div>
 
