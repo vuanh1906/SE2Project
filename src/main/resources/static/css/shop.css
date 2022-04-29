@@ -23,19 +23,24 @@ body{
 .product_info {
     height: 70px;
     margin: 10px 15px 10px 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 .title{
     text-align: justify;
     line-height: 20px;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     overflow: hidden;
     font-weight: 600;
     color: #382c29;
+    margin: 0px;
+}
+.desciption{
+    font-size: 13.5px;
+    overflow: hidden;
 }
 .price ins{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     color: #e0795e;
     text-decoration: none;
     margin-left: 15px;
