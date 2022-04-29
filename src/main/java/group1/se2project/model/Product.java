@@ -17,6 +17,7 @@ public class Product {
     private double price;
     private String imageName;
     private String description;
+    private String color;
     @ManyToOne
     private SubCategory subCategory;
 
@@ -75,6 +76,14 @@ public String convert(double price){
 
     public void setSubCategory(SubCategory subCategory) {
         this.subCategory = subCategory;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Transient
