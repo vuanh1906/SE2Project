@@ -100,7 +100,7 @@
         <li><a th:href="@{/cart}">Cart</a></li>
         <li>
             <a th:href="@{/cart}"
-            ><i class="fa-solid fa-cart-shopping" style="padding-right: 10px; color: #c5c5c5">0</i
+            ><i class="fa-solid fa-cart-shopping" style="padding-right: 10px; color: #c5c5c5" th:text="${cartCount}"> 0</i
             ></a
             >
         </li>
@@ -170,24 +170,26 @@
     <div class="container" style="z-index: -1">
         <div class="row">
             <div class="col-md-4">
+                <a class = "test" href="/shop/maincategory/keyboard" style="text-decoration: none">
                 <div class="service-item first-service">
                     <div class="service-icon"></div>
                     <h4>Keyboard</h4>
                     <p>Content</p>
-                    </a>
-                </div>
+
+                </div></a>
             </div>
             <div class="col-md-4">
+                <a class = "test" href="/shop/maincategory/mouse" style="text-decoration: none">
                 <div class="service-item second-service">
                     <div class="service-icon"></div>
                     <h4>Mouse</h4>
                     <p>Content</p>
 
-                </div>
+                </div></a>
             </div>
 
             <div class="col-md-4">
-                <a class = "test" th:href="@{/shop}" style="text-decoration: none">
+                <a class = "test" href="/shop/maincategory/headphone" style="text-decoration: none">
                     <div class="service-item third-service">
 
                         <div class="service-icon"></div>
@@ -271,31 +273,31 @@
             <div class="footer-col">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Terms of Use</a></li>
+                    <li><a th:href="@{/comingsoon}">About Us</a></li>
+                    <li><a th:href="@{/comingsoon}">Terms of Use</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Social Media</h4>
                 <div class="social-links">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a th:href="@{/comingsoon}"><i class="fa-brands fa-facebook"></i></a>
+                    <a th:href="@{/comingsoon}"><i class="fa-brands fa-instagram"></i></a>
+                    <a th:href="@{/comingsoon}"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a th:href="@{/comingsoon}"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Our Services</h4>
                 <ul>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Cart</a></li>
+                    <li><a th:href="@{/shop}">Shop</a></li>
+                    <li><a th:href="@{/cart}">Cart</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
                 <ul>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Refund</a></li>
+                    <li><a th:href="@{/comingsoon}">Contact Us</a></li>
+                    <li><a th:href="@{/comingsoon}">Refund</a></li>
                 </ul>
             </div>
         </div>

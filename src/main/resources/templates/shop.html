@@ -20,11 +20,11 @@
             <li><a th:href="@{/shop}">All Products</a></li>
             <div th:each="mainCat : ${ListCat}">
                 <div th:each="mc: ${mainCat}">
-                    <a th:href="'/shop/maincategory/'+ ${mc.key.id}">
+                    <a th:href="'/shop/maincategory/'+ ${mc.key.name}">
                         <li th:text="' '+${mc.key.name}">
                     </a>
                     <ul th:each="subCat : ${mc.value}">
-                        <a th:href="'/shop/subcategory/'+ ${subCat.id}">
+                        <a th:href="'/shop/subcategory/'+ ${subCat.name}">
                             <li th:text="'+ '+${subCat.name}">
                         </a></li>
                     </ul>
