@@ -32,7 +32,7 @@
                         <li th:text="' '+${mc.key.name}">
                     </a>
                     <ul th:each="subCat : ${mc.value}">
-                        <a th:href="'/shop/subcategory/'+ ${subCat.name}">
+                        <a th:href="'/shop/subcategory/'+ ${subCat.id}">
                             <li th:text="'+ '+${subCat.name}">
                         </a></li>
                     </ul>
