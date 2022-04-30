@@ -229,7 +229,9 @@ public class AdminController {
     public String addProduct(Model model){
         Product product = new Product();
         List<SubCategory> subCategoryList = subCategoryRepository.findAll();
-        model.addAttribute("subCategoryList",subCategoryList);
+        List<MainCategory> mainCategoryList = mainCategoryRepository.findAll();
+        model.addAttribute("subCategoryList", subCategoryList);
+        model.addAttribute("mainCategoryList", mainCategoryList);
         model.addAttribute("product", product);
         return "productAdd";
     }

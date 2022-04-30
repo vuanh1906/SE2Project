@@ -28,8 +28,16 @@
                 <label for="name">Product Name</label>
                 <input class="input" id="name" name="name" required th:field="*{productName}" type="text">
             </div>
+<!--            <div class="inputField">-->
+<!--                <label>Select Main Category</label>-->
+<!--                <div class="selection">-->
+<!--                    <select th:field="*{mainCategory}">-->
+<!--                        <option th:each="cat : ${mainCategoryList}" th:text="${cat.name}" th:value="${cat.id}" />-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="inputField">
-                <label>Select Category</label>
+                <label>Select Sub Category</label>
                 <div class="selection">
                     <select th:field="*{subCategory}">
                         <option th:each="cat : ${subCategoryList}" th:text="${cat.name}" th:value="${cat.id}" />
