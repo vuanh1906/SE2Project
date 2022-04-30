@@ -23,20 +23,6 @@ body{
 .container h2{
     font-size: 35px;
 }
-.container a{
-    text-decoration: none;
-    background: #e74c3c;
-    color: #fff;
-    padding: 12px 24px;
-    display: inline-block;
-    border-radius: 25px;
-    font-size: 15px;
-    text-transform: uppercase;
-    transition: 1s;
-}
-.container a:hover{
-    background: #c0392b;
-}
 p{
    font-size: 20px; 
 }
