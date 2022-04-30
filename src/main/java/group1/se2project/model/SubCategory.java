@@ -34,4 +34,7 @@ public class SubCategory {
     public Long getId() {
         return id;
     }
+    public String getNameSubCategory(){
+        return this.name + " ( " + mainCategory.getName() + " )";
+    }
 }

@@ -103,8 +103,8 @@ public class UserController {
         model.addAttribute("products", products);
         return "shop";
     }
-    @GetMapping(value = "/shop/subcategory/{name}")
-    public String filterBySubcategory(Model model, @PathVariable(value = "name") String name ){
+    @GetMapping(value = "/shop/subcategory/{id}")
+    public String filterBySubcategory(Model model, @PathVariable(value = "id") Long id ){
         List<MainCategory> mainCategoryList = mainCategoryRepository.findAll();
         List<Map<MainCategory, List<SubCategory>>> ListCat = new ArrayList<Map<MainCategory, List<SubCategory>>>();
         for (MainCategory m:
@@ -114,7 +114,7 @@ public class UserController {
             }});
         }
         model.addAttribute("ListCat", ListCat);
-        List<Product> products = productRepository.findBySubCategoryEquals(subCategoryRepository.findSubCategoryByName(name));
+        List<Product> products = productRepository.findBySubCategoryEquals(subCategoryRepository.findSubCategoryById(id));
 
         model.addAttribute("products", products);
         return "shop";

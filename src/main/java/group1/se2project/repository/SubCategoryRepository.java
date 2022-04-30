@@ -15,4 +15,5 @@ public interface SubCategoryRepository extends JpaRepository<SubCategory, Long> 
     Page<SubCategory> findByNameContaining(String name, Pageable pageable);
     List<SubCategory> findByMainCategoryEquals(MainCategory mainCategory);
     SubCategory findSubCategoryByName(String name);
+    SubCategory findSubCategoryById(Long id);
 }

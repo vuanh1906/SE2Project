@@ -89,8 +89,9 @@ body{
     user-select: none;
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
-    position: fixed;
+    position: absolute;
     width: 250px;
+    height: 100%;
     background: #646060;
     color: white;
 }
@@ -139,3 +140,5 @@ body{
     font-size: 17px;
     color: #e6e6e6;
 }
+
+/*----*/

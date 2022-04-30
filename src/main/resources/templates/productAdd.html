@@ -40,7 +40,7 @@
                 <label>Select Sub Category</label>
                 <div class="selection">
                     <select th:field="*{subCategory}">
-                        <option th:each="cat : ${subCategoryList}" th:text="${cat.name}" th:value="${cat.id}" />
+                        <option th:each="cat : ${subCategoryList}" th:text="${cat.getNameSubCategory()}" th:value="${cat.id}" />
                     </select>
                 </div>
             </div>
